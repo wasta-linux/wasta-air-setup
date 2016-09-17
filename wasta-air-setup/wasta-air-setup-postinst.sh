@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-# wasta-adobe-air-postinst.sh
+# wasta-air-setup-postinst.sh
 #
 # This script is automatically run by the postinst configure step on
 #   installation of wasta-adobe-air.  It can be manually re-run, but is
@@ -27,8 +27,6 @@ fi
 # ------------------------------------------------------------------------------
 # Main Processing
 # ------------------------------------------------------------------------------
-# Setup Directory for later reference
-DIR=/usr/share/wasta-adobe-air
 
 ARCH=$(uname -m)
 if [ $ARCH = "x86_64" ];
@@ -39,17 +37,6 @@ then
     ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
     ln -sf /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
 fi
-
-echo
-echo "*** Installing Adobe Air...."
-echo
-
-$DIR/AdobeAirInstaller.bin
-
-echo
-echo "*** If Adobe Air didn't install correctly, please run this command:"
-echo "    'sudo dpkg-reconfigure wasta-adobe-air'"
-echo
 
 # ------------------------------------------------------------------------------
 # Finished
