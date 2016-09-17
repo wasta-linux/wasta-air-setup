@@ -10,5 +10,8 @@ Package: wasta-air-setup
 Architecture: all
 Depends: libxt6:i386, libnspr4-0d:i386, libgtk2.0-0:i386, libstdc++6:i386, libnss3-1d:i386, libnss-mdns:i386, libxml2:i386, libxslt1.1:i386, libcanberra-gtk-module:i386, gtk2-engines-murrine:i386, libgnome-keyring0:i386, libxaw7, ${shlibs:Depends}, ${misc:Depends}
 Description: Wasta Adobe Air Setup
- Adobe Air has been discontinued by Adobe for Linux.  A few tweaks are needed
- to get it installed in newer Ubuntu/Wasta-Linux versions.
+ Adobe Air has been discontinued by Adobe for Linux.  This package makes a
+ few tweaks that needed to get it installed in newer Ubuntu/Wasta-Linux
+ versions.  After installing this package, you will need to manually install
+ Adobe Air, obtained from this website:
+ http://airdownload.adobe.com/air/lin/download/latest/AdobeAIRInstaller.bin
